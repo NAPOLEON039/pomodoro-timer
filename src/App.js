@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const moment = require('moment');
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      workDuration: '2500',
+      breakDuration: '500'
+    }
+  }
+  render() {
+    return (
+      <div className="App container">
+        <p className="sessions">Number of sessions</p>
+        <p className="work-duration work">{moment('2500', 'mmss').format('mm:ss')}</p>
+        <span class="break"><label for="break-duration">Select break duration</label>&nbsp;&nbsp;<select id="break-duration">
+          <option>5 minutes</option>
+          <option>10 minutes</option>
+          <option>15 minutes</option>
+          <option>20 minutes</option>
+        </select></span>
+      </div>
+    );
+  }
 }
 
 export default App;

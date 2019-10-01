@@ -1,22 +1,27 @@
 .App {
-  text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+.work-duration {
+  font-size: 12em;
+  font-style: bold;
+}
+.container {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  grid-template-rows: 30% auto 30%;
+  grid-template-areas: 'sessions . .' '. work .' 'break . .'
+}
+.sessions {
+  grid-area: sessions;
+  padding: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.work {
+  place-self: center;
+  grid-area: work;
 }
 
-.App-link {
-  color: #09d3ac;
+.break {
+  grid-area: break;
+  padding: 10px;
 }
