@@ -9,7 +9,7 @@
   display: grid;
   grid-template-columns: 25% 50% 25%;
   grid-template-rows: 30% auto 30%;
-  grid-template-areas: 'sessions . .' '. work .' 'break . .'
+  grid-template-areas: 'sessions . .' '. work .' 'break ps .'
 }
 .sessions {
   grid-area: sessions;
@@ -23,5 +23,11 @@
 
 .break {
   grid-area: break;
+  padding: 10px;
+}
+
+.control-buttons {
+  place-self: center;
+  grid-area: ps;
   padding: 10px;
 }
